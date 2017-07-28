@@ -8,6 +8,7 @@ void ejercicio1();
 void ejercicio2();
 void ejercicio3();
 double seno(double num);
+double coseno(double num);
 double arcoseno(double num);
 double factorial(double num);
 
@@ -102,7 +103,7 @@ void ejercicio2(){
 
 	cout << endl;
 	cout << "Seno del ángulo: " << seno(anguloGrados) << endl;
-	//cout << "Coseno del ángulo: " << coseno(anguloGrados) << endl;
+	cout << "Coseno del ángulo: " << coseno(anguloGrados) << endl;
 
 }
 
@@ -162,15 +163,37 @@ double seno(double num){
 	
 	for(int i = 3; i < 25; i += 2){
 		if(cont%2 == 0){
-			num += (pow(num, i))/factorial(i);	
+			num -= (pow(num, i))/factorial(i);	
 		}else{
-			num -= (pow(num, i))/factorial(i);
+			num += (pow(num, i))/factorial(i);
 		}
 
 		cont ++;
 	}
 
-	return sin(num);
+	return num;
+}
+
+double coseno(double num){
+	int cont;
+
+	num *= 3.14159265;
+	num /= 180;
+	cont = 0;
+
+	int num2 = 1;
+	
+	for(int i = 2; i < 24; i += 2){
+		if(cont%2 == 0){
+			num2 -= (pow(num, i))/factorial(i);	
+		}else{
+			num2 += (pow(num, i))/factorial(i);
+		}
+
+		cont ++;
+	}
+
+	return num2;
 }
 
 double arcoseno(double num){
