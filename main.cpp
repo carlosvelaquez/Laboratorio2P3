@@ -7,6 +7,7 @@ int menu();
 void ejercicio1();
 void ejercicio2();
 void ejercicio3();
+double seno(double num);
 
 int main(){
 	cout << "Laboratorio 2 - Carlos Velásquez" << endl;
@@ -107,13 +108,18 @@ void ejercicio3(){
 	float anguloA;
 	float anguloB;
 	float anguloC;
+	float area;
+	float alturaA;
+	float alturaB;
+	float alturaC;
+	float s;
 
 	cout << "Ingrese la información de triángulo" << endl << endl;
 	cout << "Lado a: " << endl;
 	cin >> ladoA;
 	cout << "Lado b: " << endl;
 	cin >> ladoB;
-	cout << "Ángulo a: " << endl;
+	cout << "Ángulo A: " << endl;
 	cin >> anguloA;
 
 	cout << endl;
@@ -122,8 +128,25 @@ void ejercicio3(){
 	anguloC = asin((ladoC*(seno(anguloA)))/ladoA);
 	ladoC = ((seno(anguloC))*(ladoA/(seno(anguloA));
 
+	s = (ladoA + ladoB + ladoC)/2;
+	area = sqrt(s*(s-ladoA)*(s-ladoB)*(s-ladoC));
+
+	alturaA = (2/ladoA)*area;
+	alturaB = (2/ladoB)*area;
+	alturaC = (2/ladoC)*area;
 	
-	
-	cout << "" << endl;
+	cout << "Información calculada: " << endl << endl
+	<< "Lado c: " << ladoC << endl
+	<< "Ángulo B: " << anguloB << endl
+	<< "Ángulo C: " << anguloc << endl
+	<< "Semiperímetro: " << s << endl
+	<< "Área: " << area << endl
+	<< "Altura a: " << alturaA << endl
+	<< "Altura b: " << alturaB << endl
+	<< "Altura c: " << alturaC << endl;
+}
+
+double seno(double num){
+	return sin(num);
 }
 
