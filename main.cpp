@@ -14,14 +14,7 @@ long factorial(double num);
 
 int main(){
 	cout << "Laboratorio 2 - Carlos Velásquez" << endl;
-
-	do{
-		if(menu() == -1){
-			return 0;
-		}
-	}while(true);
-
-
+	while(menu() != -1){}
 	return 0;
 }
 
