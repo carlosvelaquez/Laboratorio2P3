@@ -155,7 +155,7 @@ double seno(double num){
 	num /= 180;
 	cont = 0;
 
-	cout << num << endl;
+	//cout << num << endl;
 	
 	for(int i = 3; i < 12; i += 2){
 		if(cont%2 == 0){
@@ -165,7 +165,7 @@ double seno(double num){
 		}
 
 		cont ++;
-		cout << num << endl;
+		//cout << num << endl;
 	}
 
 	return num;
@@ -201,7 +201,7 @@ double arcoseno(double num){
 }
 
 long factorial(double num){
-	cout << num << endl;
+	//cout << num << endl;
 
 	long num2;
 	num2 = num;
@@ -209,6 +209,6 @@ long factorial(double num){
 	for(int i = num - 1; i > 0; i--){
 		num2 *= i;
 	}
-	cout << num2 << endl;
+	//cout << num2 << endl;
 	return num2;
 }
