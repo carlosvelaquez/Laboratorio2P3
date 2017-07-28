@@ -10,7 +10,7 @@ void ejercicio3();
 double seno(double num);
 double coseno(double num);
 double arcoseno(double num);
-double factorial(double num);
+long factorial(double num);
 
 int main(){
 	cout << "Laboratorio 2 - Carlos Velásquez" << endl;
@@ -181,9 +181,9 @@ double coseno(double num){
 	num /= 180;
 	cont = 0;
 
-	int num2 = 1;
+	double num2 = 1;
 	
-	for(int i = 2; i < 24; i += 2){
+	for(int i = 2; i < 12; i += 2){
 		if(cont%2 == 0){
 			num2 -= (pow(num, i))/factorial(i);	
 		}else{
@@ -203,10 +203,10 @@ double arcoseno(double num){
 	return num;
 }
 
-double factorial(double num){
+long factorial(double num){
 	//cout << num << endl;
 
-	int num2;
+	long num2;
 	num2 = num;
 
 	for(int i = num - 1; i > 0; i--){
